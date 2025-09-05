@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+}
+header > div.topMenu{}
+header > div.topMenu > a{}
+header > div.topMenu > ul {}
+header > div.topMenu > ul > li {}
+header > div.topMenu > ul > li div.submenu{}
