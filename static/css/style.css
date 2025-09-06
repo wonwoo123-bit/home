@@ -12,9 +12,21 @@ a{
 
 header{
     width: 100%;
+    height: 80px;
 }
-header > div.topMenu{}
-header > div.topMenu > a{}
+header > div.topMenu{
+    position: relative;
+}
+header > div.topMenu::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+header > div.topMenu > a{
+    float: left;
+    width: 200px;
+    height: 100%;
+}
 header > div.topMenu > ul {}
 header > div.topMenu > ul > li {}
 header > div.topMenu > ul > li div.submenu{}
