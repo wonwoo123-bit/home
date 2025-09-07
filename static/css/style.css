@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-ul{
+ul,
+ol{
     list-style: none;
 }
 a{
@@ -11,24 +12,109 @@ a{
     text-decoration: none;
 }
 
-header{
-    width: 1240px;
-    height: 90px;
+div#wrap{
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    min-width: 1240px;
+    margin: 0px auto;
 }
-header > div.topMenu{
+
+header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+}
+header > div.logo{
+    float: left;
+    height: 90px;
+    line-height: 90px;
+}
+header > div.logo > a{
+    height: 90px;
+    line-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > div.logo > a img{
+    vertical-align: middle;
+}
+header > div.topMenu {
+    float: left;
+    margin-left: 35px;
+
+}
+header > div.topMenu > ul {
+    height: 90px;
+    line-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > div.topMenu > ul > li {
+    position: relative;
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+header > div.topMenu > ul > li > a{
+    font-size: 16px;
+    color: rgb(26, 26, 26);
+    font-weight: 500;
+    display: block;
+    line-height: 90px;
+    position: relative;
+    z-index: 11;
+    padding: 0px 20px;
+}
+header > div.topMenu > ul > li > a::before {
+    content: " ";
+    position: absolute;
+    left: 25px;
+    bottom: 0px;
+    width: 0px;
+    height: 3px;
+    background-color: rgb(26, 26, 26);
+    opacity: 0;
+    transition: 0.3s;
+}
+header > div.topMenu > ul > li div.submenu{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 100%;
+    min-width: 1240px;
+    min-height: 355px;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 0px 0px 60px;
+    border-top: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+div.nav{
+    float: right;
+}
+div.nav > ul{
+    height: 90px;
+    line-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.nav > ul >li{
+    padding-left: 32px;
     position: relative;
 }
-header > div.topMenu::after{
-    content: "";
-    display: block;
-    clear: both;
+div.nav > ul >li > a{
+    font-size: 15px;
+    color: rgb(26, 26, 26);
+    line-height: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
-header > div.topMenu > a{
-    float: left;
-    width: 130px;
-    height: 100%;
-    display: block;
-}
-header > div.topMenu > ul {}
-header > div.topMenu > ul > li {}
-header > div.topMenu > ul > li div.submenu{}
